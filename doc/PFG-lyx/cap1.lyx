@@ -1,0 +1,690 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass book
+\begin_preamble
+\usepackage{algorithmic}
+\usepackage{algorithm}
+\floatname{algorithm}{Algoritmo}
+\floatname{table}{Tabla}
+
+\usepackage{url}
+\usepackage{hyperref}
+\usepackage{fancyhdr}
+\fancyhf{}
+\setlength{\headheight}{15.2pt}
+\pagestyle{fancy}
+\renewcommand{\chaptermark}[1]{\markboth{#1}{}}
+\renewcommand{\sectionmark}[1]{\markright{#1}{}}
+\makeatletter
+\let\sv@endpart\@endpart
+\def\@endpart{\thispagestyle{empty}\sv@endpart}
+\makeatother
+\end_preamble
+\use_default_options true
+\master maestro-pfg.lyx
+\maintain_unincluded_children false
+\language spanish
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 0
+\use_minted 0
+\index Índice
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 2.5cm
+\topmargin 2cm
+\rightmargin 2cm
+\bottommargin 2cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Chapter
+Introducción general y objetivos
+\end_layout
+
+\begin_layout Standard
+<Intro ...
+ >
+\end_layout
+
+\begin_layout Section
+Motivación y objetivos
+\end_layout
+
+\begin_layout Standard
+<Ejemplo biblio 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "eckel03,gamma95"
+literal "true"
+
+\end_inset
+
+>
+\end_layout
+
+\begin_layout Standard
+<Ejemplo referencia a sección 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Estructura-de-la-memoria"
+
+\end_inset
+
+ y a subsección de otro capítulo, que en este caso es un anexo 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "subsec:<Primera-subsección-anexo>"
+
+\end_inset
+
+.
+ 
+\series bold
+Para que funcionen correctamente las referencias a otros capítulos al exportar
+ a pdf, debe estar abierto el archivo maestro, abrir/editar el archivo a
+ exportar desde él y exportar desde el maestro
+\series default
+.>
+\end_layout
+
+\begin_layout Standard
+<Ejemplo referencia a figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Ejemplo-de-figura"
+
+\end_inset
+
+>
+\end_layout
+
+\begin_layout Standard
+<Ejemplo referencia a tabla 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:Ejemplo-de-tabla"
+
+\end_inset
+
+>
+\end_layout
+
+\begin_layout Standard
+<Ejemplo de nomenclatura 
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+symbol "POO"
+description "Programación Orientada a Objetos"
+literal "true"
+
+\end_inset
+
+ (POO)>
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename figs/logo_uned.svg
+	lyxscale 50
+	width 50col%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Ejemplo-de-figura"
+
+\end_inset
+
+
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+Ejemplo de figura con un pie largo
+\end_layout
+
+\end_inset
+
+Ejemplo de figura con un pie largo para mostrar el uso del ítem del menú
+ de Lyx Insertar->Título breve.
+ La utilidad del título breve se aprecia en la lista de figuras, es ahí
+ donde aparece, si no, aparecería todo el pie en la lista, también es convenient
+e para títulos de capítulos secciones y demás largo que ocupen más de una
+ línea en la lista de índice correspondiente.(Para insertar salto de línea
+ en pie o en enumeración Ctrl-Enter)
+\begin_inset Newline newline
+\end_inset
+
+La figura o tabla hay que insertarla dentro de un flotante.
+\begin_inset Newline newline
+\end_inset
+
+Siempre hay que Insertar->Etiqueta de la figura (fig:Ejemplo-de-figura),
+ tabla etc, para referenciarla desde el texto.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="3" columns="4">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+4
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+aaaaaa
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+aaaaaa
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+aaaaaa
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+aaaaaa
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+aaaaaa
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+aaaaaa
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+aaaaaa
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+aaaaaa
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:Ejemplo-de-tabla"
+
+\end_inset
+
+Ejemplo de tabla
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+<Ejemplo de listado de código, ver listado 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "lis:Codigo-de-edit"
+
+\end_inset
+
+, lo mejor para utilizarlo es copiar el recuadro y cambiar el código contenido,
+ así conservaremos las opciones que se han establecido, como: mostrar números
+ de línea, quebrar líneas largas.
+ etc.
+ Para ver las opciones y poder modificarlas click derecho sobre el listado
+ y elegir Configuración.
+ Para cambiar el listado contenido copiar del IDE el trozo de código que
+ se desee y pegarlo dentro del listado con Ctrl+May+v, en el menú de Lyx
+ Editar->Pegado especial->Texto simple.>
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=Java,float=p,numbers=left,basicstyle={\ttfamily},breaklines=true,tabsize=4"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "lis:Codigo-de-edit"
+
+\end_inset
+
+Código de edit
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    public final boolean edit() {
+\end_layout
+
+\begin_layout Plain Layout
+
+        
+\end_layout
+
+\begin_layout Plain Layout
+
+        ArrayList<String> campos = cargaCampos();
+\end_layout
+
+\begin_layout Plain Layout
+
+        
+\end_layout
+
+\begin_layout Plain Layout
+
+        Scanner in = new Scanner( System.in );     
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\end_layout
+
+\begin_layout Plain Layout
+
+	/* La variable resp sera true si el usuario acepta la edicion
+\end_layout
+
+\begin_layout Plain Layout
+
+	 */
+\end_layout
+
+\begin_layout Plain Layout
+
+        
+\end_layout
+
+\begin_layout Plain Layout
+
+	boolean resp = false;        
+\end_layout
+
+\begin_layout Plain Layout
+
+        int numero_total_opciones = campos.size() + opciones_no_campos;
+\end_layout
+
+\begin_layout Plain Layout
+
+        System.out.println("
+\backslash
+n" + toString()); // muestra el registro
+\end_layout
+
+\begin_layout Plain Layout
+
+        
+\end_layout
+
+\begin_layout Plain Layout
+
+        editLoop: while (true) {            
+\end_layout
+
+\begin_layout Plain Layout
+
+            editMensaje();
+\end_layout
+
+\begin_layout Plain Layout
+
+            System.out.println("Seleccione un numero (1-" + numero_total_opciones
+ + "):  ");
+\end_layout
+
+\begin_layout Plain Layout
+
+            int opcion;
+\end_layout
+
+\begin_layout Plain Layout
+
+            if ( in.hasNextInt() ) {
+\end_layout
+
+\begin_layout Plain Layout
+
+                opcion = in.nextInt();
+\end_layout
+
+\begin_layout Plain Layout
+
+                in.nextLine();
+\end_layout
+
+\begin_layout Plain Layout
+
+            } else {
+\end_layout
+
+\begin_layout Plain Layout
+
+                System.out.println("
+\backslash
+nOPCION NO VALIDA.
+ POR FAVOR, INTRODUZCA UN NUMERO.");
+\end_layout
+
+\begin_layout Plain Layout
+
+                in.nextLine();
+\end_layout
+
+\begin_layout Plain Layout
+
+                continue;
+\end_layout
+
+\begin_layout Plain Layout
+
+            }            
+\end_layout
+
+\begin_layout Plain Layout
+
+            campos = procesaOpcion(campos, opcion, in);
+\end_layout
+
+\begin_layout Plain Layout
+
+            if(salir) {
+\end_layout
+
+\begin_layout Plain Layout
+
+                if(aceptar) 
+\end_layout
+
+\begin_layout Plain Layout
+
+                    resp = true;
+\end_layout
+
+\begin_layout Plain Layout
+
+                salir = false;
+\end_layout
+
+\begin_layout Plain Layout
+
+                aceptar = false;
+\end_layout
+
+\begin_layout Plain Layout
+
+                break editLoop;                   
+\end_layout
+
+\begin_layout Plain Layout
+
+            }
+\end_layout
+
+\begin_layout Plain Layout
+
+            
+\end_layout
+
+\begin_layout Plain Layout
+
+        }
+\end_layout
+
+\begin_layout Plain Layout
+
+        return resp;
+\end_layout
+
+\begin_layout Plain Layout
+
+    }
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Estructura de la memoria
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:Estructura-de-la-memoria"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+La memoria de esta proyecto se estructura en los siguientes capítulos:
+\end_layout
+
+\begin_layout Enumerate
+Introducción general y objetivos
+\end_layout
+
+\begin_layout Enumerate
+<añadir los demás capítulos>
+\end_layout
+
+\begin_layout Enumerate
+Conclusiones y trabajos futuros
+\end_layout
+
+\begin_layout Standard
+<Comentar los capítulos>
+\end_layout
+
+\end_body
+\end_document
