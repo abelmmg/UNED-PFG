@@ -17,12 +17,23 @@
 package libqew;
 
 /**
- * Interface para validación de los campos de diólogo.
- * @author Abel
+ * Interface para validación del dialogo
+ * @author Abel Matas
  */
-public interface InterfaceValidacion {
+public interface ValidatorListener {
     
-    public void cleanThis();
-    public void saveThis();
+    /**
+     * Validación de los campos del diálogo.
+     * @return Si devuelve verdadero se continual con saveThis() y cleanThis().
+     */
     public boolean validateThis();
+    /**
+     * Actualiza los campos de la clase editada desde los del dialogo.
+     */
+    public void saveThis();
+    /**
+     * Realiza las tareas de finalización, cierre de ficheros, ...
+     */
+    public void cleanThis();
+    
 }

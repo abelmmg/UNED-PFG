@@ -17,29 +17,34 @@
 package libqew;
 
 /**
- *
- * @author Abel
+ * Clase factoría de dialogos.
+ * @author Abel Matas
  */
-public class FactoryDialogo {
+public class DialogFactory {
     
-    public Dialogo construirDialogo(TipoDialogo tipoDialogo) {
+    /**
+     * Crea un objeto InterfaceDialog segun el tipo DialogType indicado.
+     * @param dialogType Tipo de diálogo a construir
+     * @return Retorna un InterfaceDialog
+     */
+    public InterfaceDialog createDialog(DialogType dialogType) {
       
-        switch (tipoDialogo) {
+        switch (dialogType) {
             case SIMPLE:
-                return new DialogoSimple();
+                SimpleDialog ds = new SimpleDialog();
+                return ds;
 
             case TAB:
-                return new DialogoTab();
+                TabDialog dt = new TabDialog();
+                return dt;
 
-            case ARBOL:
-                return new DialogoArbol();
+            case TREE:
+                TreeDialog da = new TreeDialog();
+                return da;                
                 
             default:
                 return null;
         }  
-        //TODO: Control de errores, que pasa si retorna null, mejor con trow?
     }
-    
-    
     
 }

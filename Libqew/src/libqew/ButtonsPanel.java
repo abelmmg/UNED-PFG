@@ -15,25 +15,30 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 package libqew;
+
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.*;
 import javax.swing.event.EventListenerList;
 
 /**
- *
- * @author Abel
+ * Panel que contiene los botones Aceptar y Cancelar.
+ * @author Abel Matas
  */
-public class PanelBotones extends javax.swing.JPanel{
+public class ButtonsPanel extends javax.swing.JPanel {
 
-    JFrame f= new JFrame();   
-    private EventListenerList listeners;
-    
+    private JFrame f = new JFrame();
     /**
-     * Creates new form BotonesPanel
+     * Lista de listeners pendientes de los botones Aceptar y Cancelar.
+    */
+    private EventListenerList listeners;
+
+    /**
+     * Constructor de BotonesPanel
      */
-    public PanelBotones() {
+    public ButtonsPanel() {
         initComponents();
+        this.setName("PanelBotones");
         listeners = new EventListenerList();
     }
 
@@ -46,25 +51,20 @@ public class PanelBotones extends javax.swing.JPanel{
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        btnAbrir = new javax.swing.JButton();
-        btnCancelar = new javax.swing.JButton();
+        btnAccept = new javax.swing.JButton();
+        btnCancel = new javax.swing.JButton();
 
-        btnAbrir.setText("Aceptar");
-        btnAbrir.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                btnAbrirMouseClicked(evt);
-            }
-        });
-        btnAbrir.addActionListener(new java.awt.event.ActionListener() {
+        btnAccept.setText("Aceptar");
+        btnAccept.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnAbrirActionPerformed(evt);
+                btnAcceptActionPerformed(evt);
             }
         });
 
-        btnCancelar.setText("Cancelar");
-        btnCancelar.addActionListener(new java.awt.event.ActionListener() {
+        btnCancel.setText("Cancelar");
+        btnCancel.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnCancelarActionPerformed(evt);
+                btnCancelActionPerformed(evt);
             }
         });
 
@@ -74,55 +74,54 @@ public class PanelBotones extends javax.swing.JPanel{
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(btnAbrir)
+                .addComponent(btnAccept)
                 .addGap(18, 18, 18)
-                .addComponent(btnCancelar))
+                .addComponent(btnCancel))
         );
 
-        layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {btnAbrir, btnCancelar});
+        layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {btnAccept, btnCancel});
 
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnAbrir)
-                    .addComponent(btnCancelar))
+                    .addComponent(btnAccept)
+                    .addComponent(btnCancel))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btnAbrirMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnAbrirMouseClicked
-        
-        
-    }//GEN-LAST:event_btnAbrirMouseClicked
+    private void btnAcceptActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAcceptActionPerformed
+        triggerActionEvent(evt);
+    }//GEN-LAST:event_btnAcceptActionPerformed
 
-    private void btnAbrirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAbrirActionPerformed
-         disparaActionEvent(evt);
-    }//GEN-LAST:event_btnAbrirActionPerformed
 
-    private void btnCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCancelarActionPerformed
-        disparaActionEvent(evt);
-    }//GEN-LAST:event_btnCancelarActionPerformed
+    private void btnCancelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCancelActionPerformed
+        triggerActionEvent(evt);
+    }//GEN-LAST:event_btnCancelActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnAbrir;
-    private javax.swing.JButton btnCancelar;
+    private javax.swing.JButton btnAccept;
+    private javax.swing.JButton btnCancel;
     // End of variables declaration//GEN-END:variables
 
-    void setFrame(Frame aThis) {
-       f = (JFrame) aThis;
-    }
-    
-    private void disparaActionEvent(ActionEvent evt) {
+    /**
+     * Método que dispara la acción de los botones
+     * @param evt ActionEvent que define el componete de la acción.
+     */
+    private void triggerActionEvent(ActionEvent evt) {
         ActionListener[] listenerLista = listeners.getListeners(ActionListener.class);
-        for (int i = listenerLista.length-1; i>=0; --i) {
+        for (int i = listenerLista.length - 1; i >= 0; --i) {
             listenerLista[i].actionPerformed(evt);
         }
     }
-    
-    public void nuevoActionListener(ActionListener listener) {
+
+    /**
+     * Agrega Action Listener para captura de los botones
+     * @param listener Objeto escuchador/listener del evento.
+     */
+    public void addActionListener(ActionListener listener) {
         listeners.add(ActionListener.class, listener);
     }
-    
 }

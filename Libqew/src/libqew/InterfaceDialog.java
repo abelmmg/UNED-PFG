@@ -16,19 +16,23 @@
  */
 package libqew;
 
-import java.awt.GridBagLayout;
+import java.awt.Component;
+import java.util.Collection;
+       
 
 /**
- *
- * @author Abel
+ * Interface dialogo para acoplar componentes/dialogos en la GUI.
+ * @author Abel Matas
  */
-public class DialogoSimple extends DialogoExtensible  {
-    private GridBagLayout layout;
-
-    public DialogoSimple() {
-        super();
-        layout = new GridBagLayout();
-        super.setLayout(layout);
-    }
-
+public interface InterfaceDialog {
+    /**
+     * Agrega un componente al dialogo.
+     * @param component Componente a agregar.
+     */
+    public void addComponent(Component component);
+    /**
+     * Posibilita el paso de una lista de componentes.
+     * @param collectionList Lista que contiene los componentes
+     */
+    public void addComponentList(Collection<Component> collectionList);   
 }
